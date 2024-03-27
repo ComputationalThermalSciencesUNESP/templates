@@ -1,0 +1,147 @@
+\documentclass[a4paper,12pt]{article}
+
+    \usepackage[%
+        hidelinks,
+        pdfauthor   ={Nome do autor},
+        pdftitle    ={Título do trabalho},
+        pdfproducer ={LaTeX with hyperref}
+    ]   {hyperref}
+
+    \usepackage{graphicx}
+
+    %% Recomendação para citação padrão ABNT
+    %\usepackage[%
+    %    style=abnt,
+    %    %backend=biber,
+    %    natbib=true,
+    %    isbn=false,
+    %    url=false%
+    %]{biblatex}
+
+        %\addbibresource{books-refs.bib}
+
+    \usepackage{fancyhdr}
+    \usepackage{setspace}
+    \usepackage{geometry}
+    \usepackage{enumitem}
+
+    \fancypagestyle{feb-header}{%
+        \renewcommand{\headrulewidth}{0pt}
+        %
+        \fancyhf{}\fancyhead[L]{%
+            \begin{minipage}{0.50\textwidth}
+                \begin{flushleft}
+                    \includegraphics[%
+                        width=0.52\paperwidth
+                    ]   {img/Logo_UNESP_horizontal_Bauru_transp.png}
+                \end{flushleft}
+            \end{minipage}%
+            \begin{minipage}{0.50\textwidth}
+                \begin{flushright}
+                    \includegraphics[%
+                        width=0.12\paperwidth
+                    ]   {img/Logo_FEB_efeito_vertical_transp.png}
+                \end{flushright}
+            \end{minipage}
+        }
+    }
+
+    % Change geometry
+    \newgeometry{%
+        headheight=1.5cm,
+        headsep=0.75cm,
+        top=3.0cm,
+        left=1.5cm,
+        right=1.5cm,
+        bottom=1.5cm
+    }%
+
+    \setlength{\parindent}{0pt}
+
+    % TROQUE OS NOMES DOS HEADERS AQUI
+    \fancypagestyle{regular-header}{%
+        \fancyhead[L]{%
+            \textit{Anote o Título da Prática ou Trabalho Aqui}
+        }
+        \fancyhead[R]{%
+            \textit{Nome da Disciplina}
+        }
+    }
+
+    % Suporte para duas colunas
+    \usepackage{multicol}
+
+    \usepackage{sectsty}
+        \sectionfont{\normalsize\bfseries}
+
+    % Para usar Fonte Arial, descomente estas linhas
+    %\usepackage{helvet}
+    %\renewcommand{\familydefault}{\sfdefault}
+
+    % Para usar Times, descomente estas linhas
+    \usepackage{newtxtext}
+    \usepackage{newtxmath}
+
+    % Compile with XELatex
+    %\usepackage{fontspec}
+    %    \setmainfont{Arial}
+    %    %\setmainfont{Times New Roman}
+
+\begin{document}
+
+    %\singlespacing
+    \thispagestyle{feb-header}
+
+    \begin{center}
+        \large
+        \textbf{%
+            Relatório X -- Nome da Disciplina%
+        }
+    \end{center}
+
+    Título da Prática ou Trabalho: \rule{0.707\textwidth}{0.75pt}\\
+    Nome: \rule{0.73\textwidth}{0.75pt} RA: \rule{0.16\textwidth}{0.75pt}
+    % Adicione mais linhas de nome se for trabalho em grupo
+
+    \singlespacing
+    \pagestyle{regular-header}
+
+    Formatação obrigatória: fonte Arial ou Times New Roman, tamanho 12, com
+    espaçamento simples entre linhas.
+
+    % Para ativar duas colunas, adicione o texto entre o env. multicols
+    \begin{multicols}{2}
+        Recomendações: O formato do corpo do trabalho é livre para o discente
+        mudar como achar mais importante, de acordo com as figuras, tabelas e
+        equações que forem necessários. Recomendo usar duas colunas para
+        aproveitar o espaço em trabalhos mais extensos.
+
+        Com relação à seções do trabalho, elas também são livres com exceção de
+        relatórios de trabalhos experimentais, nos quais as seções devem ser:
+
+        \section{Objetivos}
+
+            Objetivos do trabalho.
+
+        \section{Metodologia}
+
+            Usamos tal e tal método. Lista de materias, etc...
+
+        \section{Resultados e Discussão}
+
+            Os resultados mostrados na Figura 1 mostram um aumento dos casos de
+            dengue no país...
+
+        \section{Conclusões}
+
+            Podemos concluir que a vida é difícil.
+
+        \section{Referências Bibliográficas}
+
+        Dica: para inclusão de referências bibliográficas nos trabalhos,
+        recomendo o \href{zotero.org}{Zotero}, uma ferramenta de gerenciamento
+        de bibliografias.  Após instalar o Zotero no seu computador, você pode
+        exportar sua lista de referências como arquivos .bib.
+    \end{multicols}
+
+\end{document}
